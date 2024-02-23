@@ -891,72 +891,72 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region Single tile creates a vertical word between two existing tiles
-        //public class BridgingTwoLettersVertically : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      G H I J
-        //    7| |H| | |
-        //    8| |E| | |
-        //    9| |N| | |
-        //     * 
-        //     Word 2 =
-        //      G H I J
-        //    7|S|H|I|P|
-        //    8| |E| | |
-        //    9| |N| | |
-        //     * 
-        //     Word 3 =
-        //      G H I J
-        //    7|S|H|I|P|
-        //    8| |E| | |
-        //    9|O|N|L|Y|
-        //     * 
-        //     Word 4 =
-        //      G H I J
-        //    7|S|H|I|P|
-        //    8| |E| |A|
-        //    9|O|N|L|Y|
-        //     */
+        public class BridgingTwoLettersVertically : WordsTest
+        {
+           /*
+            Word 1 =
+             G H I J
+           7| |H| | |
+           8| |E| | |
+           9| |N| | |
+            * 
+            Word 2 =
+             G H I J
+           7|S|H|I|P|
+           8| |E| | |
+           9| |N| | |
+            * 
+            Word 3 =
+             G H I J
+           7|S|H|I|P|
+           8| |E| | |
+           9|O|N|L|Y|
+            * 
+            Word 4 =
+             G H I J
+           7|S|H|I|P|
+           8| |E| |A|
+           9|O|N|L|Y|
+            */
 
-        //    public BridgingTwoLettersVertically()
-        //    {
-        //        TilesToSelect = "HENOLYA" + "SIPABCD" + "ABCDEFGHIJ";
-        //    }
+           public BridgingTwoLettersVertically()
+           {
+               TilesToSelect = "HENOLYA" + "SIPABCD" + "ABCDEFGHIJ";
+           }
 
-        //    [SetUp]
-        //    public void CreateWordsAndScores()
-        //    {
-        //        Words = new[] {
-        //            new[] {
-        //                TilePoint.Create('H', "H7"),
-        //                TilePoint.Create('E', "H8"),
-        //                TilePoint.Create('N', "H9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('S', "G7"),
-        //                TilePoint.Create('I', "I7"),
-        //                TilePoint.Create('P', "J7")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('O', "G9"),
-        //                TilePoint.Create('L', "I9"),
-        //                TilePoint.Create('Y', "J9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('A', "J8")
-        //            }
-        //        };
+           [SetUp]
+           public void CreateWordsAndScores()
+           {
+               Words = new[] {
+                   new[] {
+                       TilePoint.Create('H', "H7"),
+                       TilePoint.Create('E', "H8"),
+                       TilePoint.Create('N', "H9")
+                   },
+                   new[] {
+                       TilePoint.Create('S', "G7"),
+                       TilePoint.Create('I', "I7"),
+                       TilePoint.Create('P', "J7")
+                   },
+                   new[] {
+                       TilePoint.Create('O', "G9"),
+                       TilePoint.Create('L', "I9"),
+                       TilePoint.Create('Y', "J9")
+                   },
+                   new[] {
+                       TilePoint.Create('A', "J8")
+                   }
+               };
 
-        //        ExpectedScores = new[] { 12, 11, 21, 19 };
-        //    }
+               ExpectedScores = new[] { 12, 11, 21, 19 };
+           }
 
-        //    [Test]
-        //    public void ThenScoreIncludesBothExistingTiles()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoreIncludesBothExistingTiles()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region Single tile creates horizontal and vertical words between existing tiles

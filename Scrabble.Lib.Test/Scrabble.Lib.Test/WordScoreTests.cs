@@ -1104,71 +1104,71 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region Multiple tiles create a new vertical word and two horizontal words between existing tiles
-        //public class FillingASquareWithMultipleTilesVertically : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      G H I
-        //    8|H|E|N|
-        //    9| | | |
-        //   10| | | |
-        //     * 
-        //     Word 2 =
-        //      G H I
-        //    8|H|E|N|
-        //    9|A| | |
-        //   10|T| | |
-        //     * 
-        //     Word 3 =
-        //      G H I
-        //    8|H|E|N|
-        //    9|A| |O|
-        //   10|T| |W|
-        //     * 
-        //     Word 4 =
-        //      G H I
-        //    8|H|E|N|
-        //    9|A|G|O|
-        //   10|T|O|W|
-        //     */
+        public class FillingASquareWithMultipleTilesVertically : WordsTest
+        {
+           /*
+            Word 1 =
+             G H I
+           8|H|E|N|
+           9| | | |
+          10| | | |
+            * 
+            Word 2 =
+             G H I
+           8|H|E|N|
+           9|A| | |
+          10|T| | |
+            * 
+            Word 3 =
+             G H I
+           8|H|E|N|
+           9|A| |O|
+          10|T| |W|
+            * 
+            Word 4 =
+             G H I
+           8|H|E|N|
+           9|A|G|O|
+          10|T|O|W|
+            */
 
-        //    public FillingASquareWithMultipleTilesVertically()
-        //    {
-        //        TilesToSelect = "HENOWAB" + "ATGOABC" + "ABCDEFGHI";
-        //    }
+           public FillingASquareWithMultipleTilesVertically()
+           {
+               TilesToSelect = "HENOWAB" + "ATGOABC" + "ABCDEFGHI";
+           }
 
-        //    [SetUp]
-        //    public void ThenAllExtendedWordsAreScored()
-        //    {
-        //        Words = new[] {
-        //            new[] {
-        //                TilePoint.Create('H', "G8"),
-        //                TilePoint.Create('E', "H8"),
-        //                TilePoint.Create('N', "I8")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('A', "G9"),
-        //                TilePoint.Create('T', "G10")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('O', "I9"),
-        //                TilePoint.Create('W', "I10")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('G', "H9"),
-        //                TilePoint.Create('O', "H10")
-        //            }
-        //        };
+           [SetUp]
+           public void ThenAllExtendedWordsAreScored()
+           {
+               Words = new[] {
+                   new[] {
+                       TilePoint.Create('H', "G8"),
+                       TilePoint.Create('E', "H8"),
+                       TilePoint.Create('N', "I8")
+                   },
+                   new[] {
+                       TilePoint.Create('A', "G9"),
+                       TilePoint.Create('T', "G10")
+                   },
+                   new[] {
+                       TilePoint.Create('O', "I9"),
+                       TilePoint.Create('W', "I10")
+                   },
+                   new[] {
+                       TilePoint.Create('G', "H9"),
+                       TilePoint.Create('O', "H10")
+                   }
+               };
 
-        //        ExpectedScores = new[] { 12, 7, 19, 21 };
-        //    }
+               ExpectedScores = new[] { 12, 7, 19, 21 };
+           }
 
-        //    [Test]
-        //    public void ThenScoresExtendedWord()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoresExtendedWord()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
     }
 }

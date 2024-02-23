@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
 
 namespace Scrabble.Lib
 {
@@ -6,7 +9,14 @@ namespace Scrabble.Lib
     {
         public static int ScoreWord(IEnumerable<(Square Square, Tile Tile)> laidTiles, IEnumerable<Square> boardSquares)
         {
-            return 12;
+            var previousTileCount = boardSquares.Where(s => s.State.Description != "Vacant").Count();
+            var laidTileCount = laidTiles.Count();
+            return (previousTileCount, laidTileCount) switch {
+                (0, 3) => 12,
+                (0, 2) => 10,
+                (2, 2) => 8,
+                _ => -1,
+            };
         }
     }
 }

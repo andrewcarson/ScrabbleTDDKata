@@ -706,61 +706,61 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region Laying all tiles in one go scores a nonus 50 points
-        //public class UsingAllTiles : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      G H I
-        //    7| | | |
-        //    8|H|E|N|
-        //    9| | | |
-        //     * 
-        //     Word 2 =
-        //      G H I
-        //    7| |B| |
-        //    8|H|E|N|
-        //    9| |D| |
-        //   10| |P| |
-        //   11| |O| |
-        //   12| |S| |
-        //   13| |T| |
-        //   14| |S| |
-        //     */
+        public class UsingAllTiles : WordsTest
+        {
+           /*
+            Word 1 =
+             G H I
+           7| | | |
+           8|H|E|N|
+           9| | | |
+            * 
+            Word 2 =
+             G H I
+           7| |B| |
+           8|H|E|N|
+           9| |D| |
+          10| |P| |
+          11| |O| |
+          12| |S| |
+          13| |T| |
+          14| |S| |
+            */
 
-        //    public UsingAllTiles()
-        //    {
-        //        TilesToSelect = "HENABCD" + "BDPOSTS" + "ABCDEFGHIJ";
-        //    }
+           public UsingAllTiles()
+           {
+               TilesToSelect = "HENABCD" + "BDPOSTS" + "ABCDEFGHIJ";
+           }
 
-        //    [SetUp]
-        //    public void CreateWordsAndScores()
-        //    {
-        //        Words = new[] {
-        //            new[] {
-        //                TilePoint.Create('H', "G8"),
-        //                TilePoint.Create('E', "H8"),
-        //                TilePoint.Create('N', "I8")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('B', "H7"),
-        //                TilePoint.Create('D', "H9"),
-        //                TilePoint.Create('P', "H10"),
-        //                TilePoint.Create('O', "H11"),
-        //                TilePoint.Create('S', "H12"),
-        //                TilePoint.Create('T', "H13"),
-        //                TilePoint.Create('S', "H14")
-        //            }
-        //        };
+           [SetUp]
+           public void CreateWordsAndScores()
+           {
+               Words = new[] {
+                   new[] {
+                       TilePoint.Create('H', "G8"),
+                       TilePoint.Create('E', "H8"),
+                       TilePoint.Create('N', "I8")
+                   },
+                   new[] {
+                       TilePoint.Create('B', "H7"),
+                       TilePoint.Create('D', "H9"),
+                       TilePoint.Create('P', "H10"),
+                       TilePoint.Create('O', "H11"),
+                       TilePoint.Create('S', "H12"),
+                       TilePoint.Create('T', "H13"),
+                       TilePoint.Create('S', "H14")
+                   }
+               };
 
-        //        ExpectedScores = new[] { 12, 64 };
-        //    }
+               ExpectedScores = new[] { 12, 64 };
+           }
 
-        //    [Test]
-        //    public void ThenScoresBingoBonus()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoresBingoBonus()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region New word extends initial word, spans two bonus squares and uses all tiles

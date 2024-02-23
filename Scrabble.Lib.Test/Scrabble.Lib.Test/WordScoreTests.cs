@@ -626,83 +626,83 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region New word intersects an existing word, and creates two additional new words
-        //public class ExtendingMultipleWords : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      E F G H
-        //    7| | | | |
-        //    8| | | |A|
-        //    9| | | |T|
-        //     * 
-        //     Word 2 =
-        //      E F G H
-        //    7| |T|I|C|
-        //    8| | | |A|
-        //    9| | | |T|
-        //     * 
-        //     Word 3 =
-        //      E F G H
-        //    7| |T|I|C|
-        //    8| | | |A|
-        //    9| |B|U|T|
-        //     * 
-        //     Word 4 =
-        //      E F G H
-        //    7| |T|I|C|
-        //    8| | | |A|
-        //    9| |B|U|T|
-        //   10| | | |S|
-        //     * 
-        //     Word 5 =
-        //      E F G H
-        //    7| |T|I|C|
-        //    8| | | |A|
-        //    9| |B|U|T|
-        //   10|M|E|S|S|
-        //     */
+        public class ExtendingMultipleWords : WordsTest
+        {
+           /*
+            Word 1 =
+             E F G H
+           7| | | | |
+           8| | | |A|
+           9| | | |T|
+            * 
+            Word 2 =
+             E F G H
+           7| |T|I|C|
+           8| | | |A|
+           9| | | |T|
+            * 
+            Word 3 =
+             E F G H
+           7| |T|I|C|
+           8| | | |A|
+           9| |B|U|T|
+            * 
+            Word 4 =
+             E F G H
+           7| |T|I|C|
+           8| | | |A|
+           9| |B|U|T|
+          10| | | |S|
+            * 
+            Word 5 =
+             E F G H
+           7| |T|I|C|
+           8| | | |A|
+           9| |B|U|T|
+          10|M|E|S|S|
+            */
 
-        //    public ExtendingMultipleWords()
-        //    {
-        //        TilesToSelect = "ATBUMES" + "TICSGHI" + "ABCDEFGHIJK";
-        //    }
+           public ExtendingMultipleWords()
+           {
+               TilesToSelect = "ATBUMES" + "TICSGHI" + "ABCDEFGHIJK";
+           }
 
-        //    [SetUp]
-        //    public void CreateWordsAndScores()
-        //    {
-        //        Words = new[] {
-        //                    new[] {
-        //                        TilePoint.Create('A', "H8"),
-        //                        TilePoint.Create('T', "H9")
-        //                    },
-        //                    new[] {
-        //                        TilePoint.Create('T', "F7"),
-        //                        TilePoint.Create('I', "G7"), //DL
-        //                        TilePoint.Create('C', "H7")
-        //                    },
-        //                    new[] {
-        //                        TilePoint.Create('B', "F9"),
-        //                        TilePoint.Create('U', "G9") //DL
-        //                    },
-        //                    new[] {
-        //                        TilePoint.Create('S', "H10")
-        //                    },
-        //                    new[] {
-        //                        TilePoint.Create('M', "E10"),
-        //                        TilePoint.Create('E', "F10"),
-        //                        TilePoint.Create('S', "G10")
-        //                    }
-        //                };
+           [SetUp]
+           public void CreateWordsAndScores()
+           {
+               Words = new[] {
+                           new[] {
+                               TilePoint.Create('A', "H8"),
+                               TilePoint.Create('T', "H9")
+                           },
+                           new[] {
+                               TilePoint.Create('T', "F7"),
+                               TilePoint.Create('I', "G7"), //DL
+                               TilePoint.Create('C', "H7")
+                           },
+                           new[] {
+                               TilePoint.Create('B', "F9"),
+                               TilePoint.Create('U', "G9") //DL
+                           },
+                           new[] {
+                               TilePoint.Create('S', "H10")
+                           },
+                           new[] {
+                               TilePoint.Create('M', "E10"),
+                               TilePoint.Create('E', "F10"),
+                               TilePoint.Create('S', "G10")
+                           }
+                       };
 
-        //        ExpectedScores = new[] { 4, 11, 10, 17, 26 };
-        //    }
+               ExpectedScores = new[] { 4, 11, 10, 17, 26 };
+           }
 
-        //    [Test]
-        //    public void ThenScoresExtendedWords()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoresExtendedWords()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region Laying all tiles in one go scores a nonus 50 points

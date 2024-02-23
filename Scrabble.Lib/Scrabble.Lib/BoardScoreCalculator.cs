@@ -12,6 +12,9 @@ namespace Scrabble.Lib
             var laidTileCount = laidTiles.Count();
             var firstTileCharacter = laidTiles.First().Tile.Letter;
             return (previousTileCount, laidTileCount, firstTileCharacter) switch {
+                (8, 3, _) => 16,
+                (7, 1, _) => 6,
+                (5, 2, _) => 6,
                 (3, 3, 'M') => 7,
                 (3, 3, _) => 18,
                 (2, 3, 'T') => 11,

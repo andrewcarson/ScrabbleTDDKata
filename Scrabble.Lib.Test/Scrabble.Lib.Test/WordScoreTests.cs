@@ -577,52 +577,52 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region Initial word is intersected. Just scores points for the tiles laid (+ bonuses)
-        //public class CrossingAWordHorizontally : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      G H I J
-        //    7| |H| | |
-        //    8| |E| | |
-        //    9| |N| | |
-        //     * 
-        //     Word 2 =
-        //      G H I J
-        //    7| |H| | |
-        //    8|M|E|A|D|
-        //    9| |N| | |
-        //     */
+        public class CrossingAWordHorizontally : WordsTest
+        {
+           /*
+            Word 1 =
+             G H I J
+           7| |H| | |
+           8| |E| | |
+           9| |N| | |
+            * 
+            Word 2 =
+             G H I J
+           7| |H| | |
+           8|M|E|A|D|
+           9| |N| | |
+            */
 
-        //    public CrossingAWordHorizontally()
-        //    {
-        //        TilesToSelect = "HENABCD" + "MADEFGH" + "ABCDEF";
-        //    }
+           public CrossingAWordHorizontally()
+           {
+               TilesToSelect = "HENABCD" + "MADEFGH" + "ABCDEF";
+           }
 
-        //    [SetUp]
-        //    public void CreateWordsAndScores()
-        //    {
-        //        Words = new[] {
-        //            new[] {
-        //                TilePoint.Create('H', "H7"),
-        //                TilePoint.Create('E', "H8"),
-        //                TilePoint.Create('N', "H9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('M', "G8"),
-        //                TilePoint.Create('A', "I8"),
-        //                TilePoint.Create('D', "J8")
-        //            }
-        //        };
+           [SetUp]
+           public void CreateWordsAndScores()
+           {
+               Words = new[] {
+                   new[] {
+                       TilePoint.Create('H', "H7"),
+                       TilePoint.Create('E', "H8"),
+                       TilePoint.Create('N', "H9")
+                   },
+                   new[] {
+                       TilePoint.Create('M', "G8"),
+                       TilePoint.Create('A', "I8"),
+                       TilePoint.Create('D', "J8")
+                   }
+               };
 
-        //        ExpectedScores = new[] { 12, 7 };
-        //    }
+               ExpectedScores = new[] { 12, 7 };
+           }
 
-        //    [Test]
-        //    public void ThenScoreIncludesCrossedTile()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoreIncludesCrossedTile()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region New word intersects an existing word, and creates two additional new words

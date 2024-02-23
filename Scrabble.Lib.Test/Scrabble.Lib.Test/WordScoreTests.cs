@@ -960,79 +960,79 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region Single tile creates horizontal and vertical words between existing tiles
-        //public class FillingASquareWithSingleTile : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      H I J
-        //    7|H| | |
-        //    8|E| | |
-        //    9|N| | |
-        //     * 
-        //     Word 2 =
-        //      H I J
-        //    7|H|A|T|
-        //    8|E| | |
-        //    9|N| | |
-        //     * 
-        //     Word 3 =
-        //      H I J
-        //    7|H|A|T|
-        //    8|E| |O|
-        //    9|N| |W|
-        //     * 
-        //     Word 4 =
-        //      H I J
-        //    7|H|A|T|
-        //    8|E| |O|
-        //    9|N|O|W|
-        //     * 
-        //     Word 5 =
-        //      H I J
-        //    7|H|A|T|
-        //    8|E|G|O|
-        //    9|N|O|W|
-        //     */
+        public class FillingASquareWithSingleTile : WordsTest
+        {
+           /*
+            Word 1 =
+             H I J
+           7|H| | |
+           8|E| | |
+           9|N| | |
+            * 
+            Word 2 =
+             H I J
+           7|H|A|T|
+           8|E| | |
+           9|N| | |
+            * 
+            Word 3 =
+             H I J
+           7|H|A|T|
+           8|E| |O|
+           9|N| |W|
+            * 
+            Word 4 =
+             H I J
+           7|H|A|T|
+           8|E| |O|
+           9|N|O|W|
+            * 
+            Word 5 =
+             H I J
+           7|H|A|T|
+           8|E|G|O|
+           9|N|O|W|
+            */
 
-        //    public FillingASquareWithSingleTile()
-        //    {
-        //        TilesToSelect = "HENOWGA" + "ATOABCD" + "ABCDEFGHI";
-        //    }
+           public FillingASquareWithSingleTile()
+           {
+               TilesToSelect = "HENOWGA" + "ATOABCD" + "ABCDEFGHI";
+           }
 
-        //    [SetUp]
-        //    public void ThenWordsInBothDirectionsAreScored()
-        //    {
-        //        Words = new[] {
-        //            new[] {
-        //                TilePoint.Create('H', "H7"),
-        //                TilePoint.Create('E', "H8"),
-        //                TilePoint.Create('N', "H9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('A', "I7"),
-        //                TilePoint.Create('T', "J7")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('O', "J8"),
-        //                TilePoint.Create('W', "J9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('O', "I9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('G', "I8")
-        //            }
-        //        };
+           [SetUp]
+           public void ThenWordsInBothDirectionsAreScored()
+           {
+               Words = new[] {
+                   new[] {
+                       TilePoint.Create('H', "H7"),
+                       TilePoint.Create('E', "H8"),
+                       TilePoint.Create('N', "H9")
+                   },
+                   new[] {
+                       TilePoint.Create('A', "I7"),
+                       TilePoint.Create('T', "J7")
+                   },
+                   new[] {
+                       TilePoint.Create('O', "J8"),
+                       TilePoint.Create('W', "J9")
+                   },
+                   new[] {
+                       TilePoint.Create('O', "I9")
+                   },
+                   new[] {
+                       TilePoint.Create('G', "I8")
+                   }
+               };
 
-        //        ExpectedScores = new[] { 12, 7, 18, 14, 26 };
-        //    }
+               ExpectedScores = new[] { 12, 7, 18, 14, 26 };
+           }
 
-        //    [Test]
-        //    public void ThenScoresExtendedWord()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoresExtendedWord()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region Multiple tiles create a new horizontal word and two vertical words between existing tiles

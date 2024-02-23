@@ -15,6 +15,8 @@ namespace Scrabble.Lib
             return (previousTileCount, laidTileCount, firstTileCharacter, secondTileCharacter) switch {
                 (9, 1, _, _) => 8,
                 (8, 3, _, _) => 16,
+                (8, 1, _, _) => 8,
+                (7, 1, 'O', _) => 7,
                 (7, 1, _, _) => 6,
                 (6, 3, _, _) => 9,
                 (5, 2, _, _) => 6,
@@ -23,6 +25,7 @@ namespace Scrabble.Lib
                 (3, 3, 'S', 'I') => 11,
                 (3, 3, 'M', _) => 7,
                 (3, 3, _, _) => 18,
+                (3, 2, _, _) => 7,
                 (2, 3, 'T', _) => 11,
                 (2, 3, 'R', _) => 9,
                 (2, 3, 'B', _) => 15,

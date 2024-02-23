@@ -383,51 +383,51 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region Initial word is extended by a horizontal word above
-        //public class ExtendingAWordAbove : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      F G H
-        //    7| | | |
-        //    8| | |A|
-        //    9| | |T|
-        //     * 
-        //     Word 2 =
-        //      F G H
-        //    7|T|I|C|
-        //    8| | |A|
-        //    9| | |T|
-        //     */
+        public class ExtendingAWordAbove : WordsTest
+        {
+           /*
+            Word 1 =
+             F G H
+           7| | | |
+           8| | |A|
+           9| | |T|
+            * 
+            Word 2 =
+             F G H
+           7|T|I|C|
+           8| | |A|
+           9| | |T|
+            */
 
-        //    public ExtendingAWordAbove()
-        //    {
-        //        TilesToSelect = "ATABCDE" + "TICFGHI" + "ABCDE";
-        //    }
+           public ExtendingAWordAbove()
+           {
+               TilesToSelect = "ATABCDE" + "TICFGHI" + "ABCDE";
+           }
 
-        //    [SetUp]
-        //    public void CreateWordsAndScores()
-        //    {
-        //        Words = new[] {
-        //            new[] {
-        //                TilePoint.Create('A', "H8"),
-        //                TilePoint.Create('T', "H9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('T', "F7"),
-        //                TilePoint.Create('I', "G7"), //DL
-        //                TilePoint.Create('C', "H7")
-        //            }
-        //        };
+           [SetUp]
+           public void CreateWordsAndScores()
+           {
+               Words = new[] {
+                   new[] {
+                       TilePoint.Create('A', "H8"),
+                       TilePoint.Create('T', "H9")
+                   },
+                   new[] {
+                       TilePoint.Create('T', "F7"),
+                       TilePoint.Create('I', "G7"), //DL
+                       TilePoint.Create('C', "H7")
+                   }
+               };
 
-        //        ExpectedScores = new[] { 4, 11 };
-        //    }
+               ExpectedScores = new[] { 4, 11 };
+           }
 
-        //    [Test]
-        //    public void ThenScoresExtendedWord()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoresExtendedWord()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region Initial word is extended by a vertical word to the left

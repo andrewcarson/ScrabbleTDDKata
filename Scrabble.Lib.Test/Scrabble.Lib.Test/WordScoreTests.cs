@@ -764,58 +764,58 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region New word extends initial word, spans two bonus squares and uses all tiles
-        //public class SpanTwoWordBonusSquares : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      E F G H I J K
-        //    8| | | |B| | | |
-        //    9| | | |E| | | |
-        //   10| | | |E| | | |
-        //   11| | | | | | | |
-        //     * 
-        //     Word 2 =
-        //      E F G H I J K
-        //    8| | | |B| | | |
-        //    9| | | |E| | | |
-        //   10| | | |E| | | |
-        //   11|A|M|O|N|G|S|T|
-        //     */
+        public class SpanTwoWordBonusSquares : WordsTest
+        {
+           /*
+            Word 1 =
+             E F G H I J K
+           8| | | |B| | | |
+           9| | | |E| | | |
+          10| | | |E| | | |
+          11| | | | | | | |
+            * 
+            Word 2 =
+             E F G H I J K
+           8| | | |B| | | |
+           9| | | |E| | | |
+          10| | | |E| | | |
+          11|A|M|O|N|G|S|T|
+            */
 
-        //    public SpanTwoWordBonusSquares()
-        //    {
-        //        TilesToSelect = "BEEABCD" + "AMONGST" + "ABCDEFGHIJ";
-        //    }
+           public SpanTwoWordBonusSquares()
+           {
+               TilesToSelect = "BEEABCD" + "AMONGST" + "ABCDEFGHIJ";
+           }
 
-        //    [SetUp]
-        //    public void CreateWordsAndScores()
-        //    {
-        //        Words = new[] {
-        //            new[] {
-        //                TilePoint.Create('B', "H8"),
-        //                TilePoint.Create('E', "H9"),
-        //                TilePoint.Create('E', "H10")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('A', "E11"),//DW
-        //                TilePoint.Create('M', "F11"),
-        //                TilePoint.Create('O', "G11"),
-        //                TilePoint.Create('N', "H11"),
-        //                TilePoint.Create('G', "I11"),
-        //                TilePoint.Create('S', "J11"),
-        //                TilePoint.Create('T', "K11")//DW
-        //            }
-        //        };
+           [SetUp]
+           public void CreateWordsAndScores()
+           {
+               Words = new[] {
+                   new[] {
+                       TilePoint.Create('B', "H8"),
+                       TilePoint.Create('E', "H9"),
+                       TilePoint.Create('E', "H10")
+                   },
+                   new[] {
+                       TilePoint.Create('A', "E11"),//DW
+                       TilePoint.Create('M', "F11"),
+                       TilePoint.Create('O', "G11"),
+                       TilePoint.Create('N', "H11"),
+                       TilePoint.Create('G', "I11"),
+                       TilePoint.Create('S', "J11"),
+                       TilePoint.Create('T', "K11")//DW
+                   }
+               };
 
-        //        ExpectedScores = new[] { 10, 96 /*uses 7 tiles*/ };
-        //    }
+               ExpectedScores = new[] { 10, 96 /*uses 7 tiles*/ };
+           }
 
-        //    [Test]
-        //    public void ThenScoresAllBonuses()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoresAllBonuses()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region Single tile creates a horizontal word between two existing tiles

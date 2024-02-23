@@ -1036,71 +1036,71 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region Multiple tiles create a new horizontal word and two vertical words between existing tiles
-        //public class FillingASquareWithMultipleTilesHorizontally : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      H I J
-        //    7|H| | |
-        //    8|E| | |
-        //    9|N| | |
-        //     * 
-        //     Word 2 =
-        //      H I J
-        //    7|H|A|T|
-        //    8|E| | |
-        //    9|N| | |
-        //     * 
-        //     Word 3 =
-        //      H I J
-        //    7|H|A|T|
-        //    8|E| | |
-        //    9|N|O|W|
-        //     * 
-        //     Word 4 =
-        //      H I J
-        //    7|H|A|T|
-        //    8|E|G|O|
-        //    9|N|O|W|
-        //     */
+        public class FillingASquareWithMultipleTilesHorizontally : WordsTest
+        {
+           /*
+            Word 1 =
+             H I J
+           7|H| | |
+           8|E| | |
+           9|N| | |
+            * 
+            Word 2 =
+             H I J
+           7|H|A|T|
+           8|E| | |
+           9|N| | |
+            * 
+            Word 3 =
+             H I J
+           7|H|A|T|
+           8|E| | |
+           9|N|O|W|
+            * 
+            Word 4 =
+             H I J
+           7|H|A|T|
+           8|E|G|O|
+           9|N|O|W|
+            */
 
-        //    public FillingASquareWithMultipleTilesHorizontally()
-        //    {
-        //        TilesToSelect = "HENOWAB" + "ATGOABC" + "ABCDEFGHI";
-        //    }
+           public FillingASquareWithMultipleTilesHorizontally()
+           {
+               TilesToSelect = "HENOWAB" + "ATGOABC" + "ABCDEFGHI";
+           }
 
-        //    [SetUp]
-        //    public void ThenAllExtendedWordsAreScored()
-        //    {
-        //        Words = new[] {
-        //            new[] {
-        //                TilePoint.Create('H', "H7"),
-        //                TilePoint.Create('E', "H8"),
-        //                TilePoint.Create('N', "H9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('A', "I7"),
-        //                TilePoint.Create('T', "J7")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('O', "I9"),
-        //                TilePoint.Create('W', "J9")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('G', "I8"),
-        //                TilePoint.Create('O', "J8")
-        //            }
-        //        };
+           [SetUp]
+           public void ThenAllExtendedWordsAreScored()
+           {
+               Words = new[] {
+                   new[] {
+                       TilePoint.Create('H', "H7"),
+                       TilePoint.Create('E', "H8"),
+                       TilePoint.Create('N', "H9")
+                   },
+                   new[] {
+                       TilePoint.Create('A', "I7"),
+                       TilePoint.Create('T', "J7")
+                   },
+                   new[] {
+                       TilePoint.Create('O', "I9"),
+                       TilePoint.Create('W', "J9")
+                   },
+                   new[] {
+                       TilePoint.Create('G', "I8"),
+                       TilePoint.Create('O', "J8")
+                   }
+               };
 
-        //        ExpectedScores = new[] { 12, 7, 19, 21 };
-        //    }
+               ExpectedScores = new[] { 12, 7, 19, 21 };
+           }
 
-        //    [Test]
-        //    public void ThenScoresExtendedWord()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoresExtendedWord()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region Multiple tiles create a new vertical word and two horizontal words between existing tiles

@@ -479,51 +479,51 @@ namespace Scrabble.Lib.Test
         #endregion
 
         #region Initial word is extended by a vertical word to the right
-        //public class ExtendingAWordRight : WordsTest
-        //{
-        //    /*
-        //     Word 1 =
-        //      H I J
-        //    8|O|R| |
-        //    9| | | |
-        //   10| | | |
-        //     * 
-        //     Word 2 =
-        //      H I J
-        //    8|O|R|B|
-        //    9| | |E|
-        //   10| | |G|
-        //     */
+        public class ExtendingAWordRight : WordsTest
+        {
+           /*
+            Word 1 =
+             H I J
+           8|O|R| |
+           9| | | |
+          10| | | |
+            * 
+            Word 2 =
+             H I J
+           8|O|R|B|
+           9| | |E|
+          10| | |G|
+            */
 
-        //    public ExtendingAWordRight()
-        //    {
-        //        TilesToSelect = "ORABCDE" + "BEGFGHI" + "ABCDE";
-        //    }
+           public ExtendingAWordRight()
+           {
+               TilesToSelect = "ORABCDE" + "BEGFGHI" + "ABCDE";
+           }
 
-        //    [SetUp]
-        //    public void CreateWordsAndScores()
-        //    {
-        //        Words = new[]{
-        //            new[] {
-        //                TilePoint.Create('O', "H8"),
-        //                TilePoint.Create('R', "I8")
-        //            },
-        //            new[] {
-        //                TilePoint.Create('B', "J8"),
-        //                TilePoint.Create('E', "J9"),
-        //                TilePoint.Create('G', "J10") //TL
-        //            }
-        //        };
+           [SetUp]
+           public void CreateWordsAndScores()
+           {
+               Words = new[]{
+                   new[] {
+                       TilePoint.Create('O', "H8"),
+                       TilePoint.Create('R', "I8")
+                   },
+                   new[] {
+                       TilePoint.Create('B', "J8"),
+                       TilePoint.Create('E', "J9"),
+                       TilePoint.Create('G', "J10") //TL
+                   }
+               };
 
-        //        ExpectedScores = new[] { 4, 15 };
-        //    }
+               ExpectedScores = new[] { 4, 15 };
+           }
 
-        //    [Test]
-        //    public void ThenScoresExtendedWord()
-        //    {
-        //        LayTheWords();
-        //    }
-        //}
+           [Test]
+           public void ThenScoresExtendedWord()
+           {
+               LayTheWords();
+           }
+        }
         #endregion
 
         #region Initial word is intersected. Just scores points for the tiles laid (+ bonuses)

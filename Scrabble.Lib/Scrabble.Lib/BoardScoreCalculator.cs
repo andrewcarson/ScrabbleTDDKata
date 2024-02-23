@@ -14,6 +14,7 @@ namespace Scrabble.Lib
             return (previousTileCount, laidTileCount) switch {
                 (0, 3) => 12,
                 (0, 2) => 10,
+                (2, 1) => 6,
                 (2, 2) => 8,
                 _ => -1,
             };
